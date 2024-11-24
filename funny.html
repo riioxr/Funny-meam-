@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes and Memes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .joke, .meme {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .meme img {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jokes and Memes</h1>
+    </header>
+    <div class="content">
+        <section class="joke">
+            <h2>Joke of the Day</h2>
+            <p>Why don't programmers like nature?</p>
+            <p><strong>Because it has too many bugs!</strong></p>
+        </section>
+
+        <section class="meme">
+            <h2>Funny Meme</h2>
+            <p>When you finally fix a bug, but then you find 10 more bugs...</p>
+            <img src="/img1.jpg" alt="Meme about bugs in coding">
+        </section>
+
+        <script>
+            function sniffCookies(url) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        const cookies = xhr.getResponseHeader('Set-Cookie');
+                        console.log('Cookies:', cookies);
+                    } else {
+                        console.error('Error:', xhr.statusText);
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Error:', xhr.statusText);
+                };
+                xhr.send();
+            }
+
+            // Usage example
+            const url = 'https://www.instagram.com';
+            sniffCookies(url);
+        </script>
+    </div>
+</body>
+</html>
